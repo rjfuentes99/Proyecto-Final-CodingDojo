@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*FONDO ANIMADO*/
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.bg {
+    animation: slide 10s ease-in-out infinite alternate;
+    background-image: linear-gradient(-20deg, rgba(87, 154, 177, 0.642) 50%, rgb(225, 215, 198) 50%);
+    bottom: 0;
+    left: -100%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 10s;
+}
+
+.bg3 {
+    animation-duration: 10s;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+/*BARRA DE NAVEGACION RESPONSIVA*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(87, 154, 177);
+    position: relative;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+
+    .nav>.nav-links {
+        z-index: 999;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        width: 100%;
+        opacity: 0.5;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+/* FORMULARIO DE REGISTRO LOGIN*/
+
+.form-box {
+    
+    background-color: purple;
+    width: 450px;
+    height: 600px;
+    position: relative;
+    margin: 2% auto;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    margin-top: 140px;
+    overflow: hidden;
+}
+
+.button-box {
+    width: 450px;
+    margin-top: 30px;
+    margin-left: 100px;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ffffff;
+    border-radius: 30px;
+}
+.button-box button{
+    padding: 20px;
+    font-size: 20px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #579BB1;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.iconos_sociales {
+    margin: -25px auto;
+    text-align: center;
+}
+
+.iconos_sociales img {
+    width: 25px;
+}
+
+.input-group-login {
+    top: 200px;
+    position: absolute;
+    width: 350px;
+    transition: .5s;
+}
+
+.input-group-register {
+    top: 120px;
+    position: absolute;
+    width: 350px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    
+    outline: none;
+    background: transparent;
+    color: #777;
+}
+
+.submit-btn {
+    color: white;
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #579BB1;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 30px 10px 34px 0;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#login {
+    left: 50px;
+}
+
+#login input {
+
+    font-size: 15;
+}
+
+#register {
+    left: 450px;
+}
+
+#register input {
+
+    font-size: 15;
+}

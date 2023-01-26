@@ -9,7 +9,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRzNQjC4OdkXBEZaiAOHg_0rfDcSOXzF4&libraries=places"></script>
 
     <link rel="stylesheet" href="mapa.css">
-    <title>Dashboard</title>
+    <title>Mapa</title>
 </head>
 <body>
     <div class="container">
@@ -19,9 +19,10 @@
             <a href="/logout" class="btn btn-danger">Cerrar Sesion</a>
         </header>
         <nav>
+            <a href="/index">Home</a>
             <a href="">Agenda tu cita</a>
             <a href="">Informacion</a>
-            <a href="">Contacto</a>
+            <a href="/joinus">Unetenos</a>
         </nav>
     </div>
     <button id="search-btn">Search Veterinary</button>
@@ -31,7 +32,7 @@
     <script>
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16
+            zoom: 14
         });
 
         if (navigator.geolocation) {
@@ -47,8 +48,8 @@
                 document.getElementById("search-btn").addEventListener("click", function () {
                     var request = {
                         location: pos,
-                        radius: '6000',
-                        query: 'clinicaveterinaria'
+                        radius: '500',
+                        query: 'clinica veterinaria'
                     };
                     service.textSearch(request, callback);
                 });

@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ControladorMapa {
     
-    @GetMapping("/dashboard")
+    @GetMapping("/mapa")
     public String dashboard(){
-        return "dashboard.jsp";
+        return "mapa.jsp";
     }
 }

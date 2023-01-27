@@ -37,7 +37,7 @@
             
             <div class="nav-links">
                 <a href="/index">Home</a>
-                <a href="">Agenda tu cita</a>
+                <a href="/dashboard">Agenda tu cita</a>
                 <a href="">Informacion</a>
                 <a href="/joinus">Unetenos</a>
             </div>

@@ -20,13 +20,13 @@
         </header>
         <nav>
             <a href="/index">Home</a>
-            <a href="">Agenda tu cita</a>
+            <a href="/dashboard">Agenda tu cita</a>
             <a href="">Informacion</a>
             <a href="/joinus">Unetenos</a>
         </nav>
         <section>
             <button><a href="/mapa">Buscar veterinarias</a></button>
-            <button><a href="/">Reservar Hora</a></button>
+            <button><a href="/dashboard">Reservar Hora</a></button>
 
         </section>
     </div>

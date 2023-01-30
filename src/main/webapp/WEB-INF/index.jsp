@@ -28,7 +28,7 @@
             <nav class="nav-links">
                 <a href="/index">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
-                <a href="">Informacion</a>
+                <a href="/informacion">Informacion</a>
             </nav>
             <a href="/joinus" class="btn">Unetenos</a>
 
@@ -46,6 +46,7 @@
         </header>
 
         <main>
+            
         </main>
         <section>
             <button><a href="/mapa">Buscar veterinarias</a></button>

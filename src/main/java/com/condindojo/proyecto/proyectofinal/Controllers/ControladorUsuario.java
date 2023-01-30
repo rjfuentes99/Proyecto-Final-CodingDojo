@@ -77,4 +77,8 @@ public class ControladorUsuario {
     public String dashboard(){
         return "index.jsp";
     }
+    @GetMapping("/informacion")
+    public String info(){
+        return "info.jsp";
+    }
 }

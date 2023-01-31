@@ -14,20 +14,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/index.css">
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRzNQjC4OdkXBEZaiAOHg_0rfDcSOXzF4&libraries=places"></script>
-    <title>Dashboard</title>
+    <title>FindMyVet</title>
 </head>
 
 <body>
     <div>
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
+
     </div>
     <div class="container">
         <header class="header">
@@ -52,13 +49,8 @@
                 </div>
             </div>
         </header>
-
         <main>
-            
-        </main>
-        <section>
-
-        <div class="contenido-central">
+             <div class="contenido-central">
             <div class="slideshowContainer">
 
                 <img class="imageSlides" src="img/imgcarru1.jpg" >
@@ -66,8 +58,8 @@
                 <img class="imageSlides" src="img/imgcarru3.jpg" >
 
 
-                <span id="leftArrow" class="slideshowArrow">&#8249;</span>
-                <span id="rightArrow" class="slideshowArrow">&#8250;</span>
+                <span id="leftArrow" class="slideshowArrow"></span>
+                <span id="rightArrow" class="slideshowArrow"></span>
 
                 <div class="slideshowCircles">
                     <span class="circle dot"></span>
@@ -76,9 +68,22 @@
                 </div>
             </div>
             <script src="js/index.js"></script>
-            <button class="boton-vet" id="btn1" ><a href="/mapa">Buscar veterinarias</a></button>
-            <button class="boton-hora" id="btn1" ><a href="/dashboard">Reservar Hora</a></button>
+            <div>
+
+            </div>
         </div>
+        </main>
+        <section class="botones">
+            <button class="boton-vet" id="btn1" ><a href="/mapa"><span class="material-symbols-outlined">pets</span><h3>Buscar veterinarias</h3></a></button>
+            <button class="boton-hora" id="btn1" ><a href="/dashboard"><span class="material-symbols-outlined">calendar_month</span><h3>Reservar Hora</h3></a></button>
+            <button class="boton-servicio"> <a href=""><span class="material-symbols-outlined">manage_accounts</span><h3>Servicio al cliente</h3></a></button>
+            <button class="boton-aranceles"> <a href=""><span class="material-symbols-outlined">payments</span><h3>Aranceles</h3></a></button>
+        </section>
+        <footer>
+            <img src="img/Logosololetras3.png" alt="">
+        </footer>
+
+       
     </div>
 
 

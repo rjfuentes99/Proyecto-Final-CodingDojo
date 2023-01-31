@@ -58,7 +58,7 @@
 				<tbody>
 					<c:forEach items="${all_veterinaries}" var="p">
 						<tr>
-							<td><a href="/${p.id}">${p.vetname}</a></td>
+							<td><a href="show/${p.id}">${p.vetname}</a></td>
                             <td>${p.ubicacion}</td>
                             <td>${p.servicios}</td>
 

@@ -1,12 +1,16 @@
 package com.condindojo.proyecto.proyectofinal.Service;
 
+import java.util.List;
+
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
 import com.condindojo.proyecto.proyectofinal.Models.User;
+import com.condindojo.proyecto.proyectofinal.Models.Veterinary;
 import com.condindojo.proyecto.proyectofinal.Repository.RepositorioUsuario;
+import com.condindojo.proyecto.proyectofinal.Repository.RepositorioVeterinaria;
 
 
 
@@ -41,7 +45,9 @@ public class AppService {
             return null;
         }
     }
+
     public User login(String email, String password){
+
         //Buscamos que el correo este en la base de datos
         User existeUsuario = repositorio_usuario.findByEmail(email); 
         if (existeUsuario == null) {
@@ -56,5 +62,24 @@ public class AppService {
             return null;
         }
     }
+
+    @Autowired
+    private RepositorioVeterinaria repositorio_vetertinaria;
+
+    // Me guarda en la base de datos un objeto de projecto
+    public Veterinary save_course(Veterinary nuevaVeterinary){
+       return repositorio_vetertinaria.save(nuevaVeterinary);
+    }
+    // Me regresa un proyecto en base a su ID
+    public Veterinary find_course(Long id){
+        return repositorio_vetertinaria.findById(id).orElse(null);
+     }
+     public void delete(Long veterinary_id){
+        repositorio_vetertinaria.deleteById(veterinary_id);
+    }
+    public List<Veterinary> listaVeterinarias(){
+        return repositorio_vetertinaria.findAll();
+    }
 }
+
 

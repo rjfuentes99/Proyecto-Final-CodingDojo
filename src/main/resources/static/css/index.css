@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*FONDO ANIMADO*/
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.bg {
+	animation: slide 10s ease-in-out infinite alternate;
+	background-image: linear-gradient(-20deg, #579ab1a4 50%, #e1d7c6 50%);
+	bottom: 0;
+	left: -100%;
+	opacity: .5;
+	position: fixed;
+	right: -50%;
+	top: 0;
+	z-index: -1;
+}
+
+.bg2 {
+	animation-direction: alternate-reverse;
+	animation-duration: 10s;
+}
+
+.bg3 {
+	animation-duration: 10s;
+}
+
+.content {
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: .25em;
+	box-shadow: 0 0 .25em rgba(255, 255, 255, 0.25);
+	box-sizing: border-box;
+	left: 50%;
+	padding: 10vmin;
+	position: fixed;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+h1 {
+	font-family: monospace;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(-25%);
+	}
+
+	100% {
+		transform: translateX(25%);
+	}
+}
+
+.botones{
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	height: 400px;
+}
+button{
+	margin: 20px;
+	position: relative;
+    cursor: pointer;
+    height: auto;
+    align-items: start;
+    width: 300px;
+	height: 130px;
+    background-color: #F1EFEB;
+    border: 0 solid #CCCCCC;
+    border-radius: 8px;
+    border: 1px solid #CCCCCC;
+}
+button a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #2f4b57;
+}
+
+
+.slideshowContainer {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 550px;
+	align-content: center;
+}
+
+.imageSlides {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	z-index: -1;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.slideshowArrow {
+	font-size: 7em;
+	color: rgba(141, 141, 141, 0.7);
+	cursor: pointer;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+	opacity: 0.75;
+}
+
+#leftArrow {
+	position: absolute;
+	left: 4%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+	position: absolute;
+	right: 4%;
+	top: 50%;
+	transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.circle {
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 3px;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: solid 2px rgba(141, 141, 141, 0.7);
+	transition: 1s ease-in-out;
+}
+
+.dot {
+	background-color: rgba(255, 255, 255, 0.7);
+	border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+footer{
+	background-color: #2f4b57;
+	width: 100%;
+	height: 300px;
+}

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap" rel="stylesheet">
@@ -15,11 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css/login.css">
-    <title>Agendar cita</title>
+    <title>New Veterinary</title>
 </head>
 <body>
-	<div class="container">
-		<header class="header">
+    <div class="container">
+        <header class="header">
             <div class="logo">
                 <img src="/img/pngwing.com.png" alt="">
                 <h3>FindMyVet</h3>
@@ -28,7 +28,7 @@
             <nav class="nav-links">
                 <a href="/index">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
-                <a href="/informacion">Informacion</a>
+                <a href="">Informacion</a>
             </nav>
             <a href="/joinus" class="btn">Unetenos</a>
 
@@ -45,51 +45,26 @@
             </div>
         </header>
 
-		<div class="row">
-			<h2>Cursos</h2>
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>Veterinaria</th>
-						<th>Ubicacion</th>
-                        <th>Servicios</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${all_veterinaries}" var="p">
-						<tr>
-							<td><a href="show/${p.id}">${p.vetname}</a></td>
-                            <td>${p.ubicacion}</td>
-                            <td>${p.servicios}</td>
+        <form:form action="/create" method="post" modelAttribute="veterinary">
+            <h1>Nueva veterinaria</h1>
+            <div class="form-group">
+                <form:label path="vetname">Nombre de la veterinaria</form:label>
+                <form:input path="vetname" class="form-control"></form:input>
+                <form:errors path="vetname" class="text-danger"></form:errors>
+            </div>
+            <div class="form-group">
+                <form:label path="ubicacion">Ubicacion</form:label>
+                <form:input path="ubicacion" class="form-control"></form:input>
+                <form:errors path="ubicacion" class="text-danger"></form:errors>
+            </div>
+            <div class="form-group">
+                <form:label path="servicios">Servicios</form:label>
+                <form:input path="servicios" class="form-control"></form:input>
+                <form:errors path="servicios" class="text-danger"></form:errors>
+            </div>
 
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
-		<a href="/new" class="btn btn-success">Nueva veterinaria</a>
-	</div>
-    <script>
-        function openNav(){
-            document.getElementById("mobile-menu").style.width = "100%";
-        }
-        function closeNav(){
-            document.getElementById("mobile-menu").style.width = "0%";
-        }
-
-        var x = document.getElementById('login');
-        var y = document.getElementById('register');
-        var z = document.getElementById('btn');
-        function register() {
-            x.style.left = '-400px';
-            y.style.left = '45px';
-            z.style.left = '110px';
-        }
-        function login() {
-            x.style.left = '50px';
-            y.style.left = '450px';
-            z.style.left = '0px';
-        }
-    </script>
+            <input type="submit" value="Guardar" class="btn btn-success" />
+        </form:form>
+    </div>
 </body>
 </html>

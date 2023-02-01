@@ -20,6 +20,8 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRzNQjC4OdkXBEZaiAOHg_0rfDcSOXzF4&libraries=places"></script>
 
     <link rel="stylesheet" href="css/mapa.css">
+    <link rel="stylesheet" href="css/footer.css">
+
     <title>Mapa</title>
 </head>
 
@@ -60,6 +62,28 @@
     <div id="map"></div>
     </div>
     <button id="search-btn">Search Veterinary</button>
+
+    <footer>
+        <div class="divfooter">
+            <h2>FindMyVet</h2>
+            <p>El amor hacia los animales eleva el nivel cultural de la sociedad<br><br>
+                - F.Salvochea
+            </p>
+
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="divcontact">
+            <h3>Contactanos</h3>
+            <p>800 775 222 / findmyvet@gmail.com </p>
+        </div>
+    </footer>
+    <div class="llama">
+        <p>@ FindMyVet - Todos los derechos reservados</p>
+    </div>
 
     <script>
         function openNav() {

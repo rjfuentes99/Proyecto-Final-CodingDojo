@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+
     <title>FindMyVet</title>
 </head>
 
@@ -80,8 +82,26 @@
             <button class="boton-aranceles"> <a href=""><span class="material-symbols-outlined">payments</span><h3>Aranceles</h3></a></button>
         </section>
         <footer>
-            <img src="img/Logosololetras3.png" alt="">
+            <div class="divfooter">
+                <h2>FindMyVet</h2>
+                <p>El amor hacia los animales eleva el nivel cultural de la sociedad<br><br>
+                    - F.Salvochea
+                </p>
+    
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="divcontact">
+                <h3>Contactanos</h3>
+                <p>800 775 222 / findmyvet@gmail.com </p>
+            </div>
         </footer>
+        <div class="llama">
+            <p>@ FindMyVet - Todos los derechos reservados</p>
+        </div>
 
        
     </div>

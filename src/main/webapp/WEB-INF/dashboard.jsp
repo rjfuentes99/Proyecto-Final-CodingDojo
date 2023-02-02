@@ -47,7 +47,7 @@
         </header>
 
 		<div class="row">
-			<h2>Cursos</h2>
+			<h2>Veterinarias</h2>
 			<table class="table table-hover">
 				<thead>
 					<tr>

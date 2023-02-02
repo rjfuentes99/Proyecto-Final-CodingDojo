@@ -31,6 +31,9 @@ public class Veterinary {
     private String vetdescription;
 
     @NotEmpty
+    private String vetemail;
+
+    @NotEmpty
     private String ubicacion;
 
     @NotEmpty

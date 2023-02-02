@@ -26,6 +26,10 @@ public class Veterinary {
     @Size(min=2, max=40, message = "El nombre de la veterinaria debe de tener entre 2 y 40 caracteres")
     private String vetname;
 
+    @NotEmpty(message = "El campo del nombre de la descripcion es obligatorio")
+    @Size(min=10, max=999)
+    private String vetdescription;
+
     @NotEmpty
     private String ubicacion;
 
@@ -44,6 +48,7 @@ public class Veterinary {
     public Veterinary() {
     }
 
+    // Getter y setters
     public Long getId() {
         return id;
     }
@@ -60,6 +65,7 @@ public class Veterinary {
         this.vetname = vetname;
     }
 
+    
     public Date getCreated_at() {
         return created_at;
     }
@@ -90,6 +96,14 @@ public class Veterinary {
 
     public void setServicios(String servicios) {
         this.servicios = servicios;
+    }
+
+    public String getVetdescription() {
+        return vetdescription;
+    }
+
+    public void setVetdescription(String vetdescription) {
+        this.vetdescription = vetdescription;
     }
 
     

@@ -67,11 +67,11 @@ public class AppService {
     private RepositorioVeterinaria repositorio_vetertinaria;
 
     // Me guarda en la base de datos un objeto de projecto
-    public Veterinary save_course(Veterinary nuevaVeterinary){
+    public Veterinary save_veterinary(Veterinary nuevaVeterinary){
        return repositorio_vetertinaria.save(nuevaVeterinary);
     }
     // Me regresa un proyecto en base a su ID
-    public Veterinary find_course(Long id){
+    public Veterinary find_veterinary(Long id){
         return repositorio_vetertinaria.findById(id).orElse(null);
      }
      public void delete(Long veterinary_id){

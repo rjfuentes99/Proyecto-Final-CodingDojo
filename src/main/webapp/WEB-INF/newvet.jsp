@@ -64,6 +64,11 @@
                 <form:input path="servicios" class="form-control"></form:input>
                 <form:errors path="servicios" class="text-danger"></form:errors>
             </div>
+            <div class="form-group">
+                <form:label path="vetdescription">Descripcion</form:label>
+                <form:textarea path="vetdescription" class="form-control"></form:textarea>
+                <form:errors path="vetdescription" class="text-danger"></form:errors>
+            </div>
 
             <input type="submit" value="Guardar" class="btn btn-success" />
         </form:form>

@@ -53,7 +53,7 @@
         <main>
             <div>
                 <h2>${vetid.vetname}</h2>
-                <!--${vetid.vetdescription}-->
+                <h3>${vetid.vetdescription}</h3>
             </div>
             <div>
                 <!--Mensajes de usuarios-->

@@ -46,7 +46,7 @@
     </header>
 
     <div class="container">
-        <form:form action="/create" method="post" modelAttribute="veterinary">
+        <form:form action="/update" method="post" modelAttribute="veterinary">
             <h1>Editar Veterinaria</h1>
             <div class="form-group">
                 <form:label path="vetname">Nombre de la veterinaria</form:label>
@@ -73,6 +73,7 @@
 
             <input type="hidden" name="_method" value="put"/>
             
+            <a href="/dashboard" class="btn btn-info">Cancel</a>
             <input type="submit" value="Guardar" class="btn btn-success" />
         </form:form>
 

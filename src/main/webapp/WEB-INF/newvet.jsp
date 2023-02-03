@@ -69,16 +69,11 @@
                 <form:textarea path="vetdescription" class="form-control"></form:textarea>
                 <form:errors path="vetdescription" class="text-danger"></form:errors>
             </div>
-            <div class="form-group">
-                <form:label path="vetemail">Descripcion</form:label>
-                <form:input path="vetemail" class="form-control"></form:input>
-                <form:errors path="vetemail" class="text-danger"></form:errors>
-            </div>
 
+            
             <input type="submit" value="Guardar" class="btn btn-success" />
         </form:form>
     </div>
-
     <footer>
         <div class="divfooter">
             <h2>FindMyVet</h2>

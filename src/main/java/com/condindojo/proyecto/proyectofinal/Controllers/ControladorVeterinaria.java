@@ -27,7 +27,6 @@ public class ControladorVeterinaria {
     @GetMapping("/new")
     public String new_course(@ModelAttribute("veterinary") Veterinary veterinary,
                                 HttpSession session){
-
         return "newvet.jsp";                           
     }
 
@@ -64,19 +63,8 @@ public class ControladorVeterinaria {
     @GetMapping("/edit/{veterinary_id}")
     public String edit(@PathVariable("veterinary_id") Long veterinary_id,HttpSession session,
                         @ModelAttribute("veterinary") Veterinary veterinary, Model model){
-      /*   // Revisamos que haya iniciado sesion
-         User usuario_en_sesion = (User)session.getAttribute("user_session");
-         if (usuario_en_sesion == null) {
-             return "redirect:/"; 
-         }
-         // Revisamos que haya iniciado sesion*/
         
         Veterinary vet_edit = servicio.find_veterinary(veterinary_id);
-
-        /*// Revisamos que el usuario tenga el rol de administrador
-        if (course_edit.getPlanner().getId() != usuario_en_sesion.getId()) {
-            return "redirect:/dashboard";
-        }*/
 
         model.addAttribute("veterinary", vet_edit);
 

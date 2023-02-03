@@ -78,7 +78,7 @@
         <section class="botones">
             <button class="boton-vet" id="btn1" ><a href="/mapa"><span class="material-symbols-outlined">pets</span><h3>Buscar veterinarias</h3></a></button>
             <button class="boton-hora" id="btn1" ><a href="/dashboard"><span class="material-symbols-outlined">calendar_month</span><h3>Reservar Hora</h3></a></button>
-            <button class="boton-servicio"> <a href=""><span class="material-symbols-outlined">manage_accounts</span><h3>Servicio al cliente</h3></a></button>
+            <button class="boton-servicio"> <a href="/atencioncliente"><span class="material-symbols-outlined">manage_accounts</span><h3>Servicio al cliente</h3></a></button>
             <button class="boton-aranceles"> <a href=""><span class="material-symbols-outlined">payments</span><h3>Aranceles</h3></a></button>
         </section>
         <footer>

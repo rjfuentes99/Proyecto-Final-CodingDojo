@@ -7,17 +7,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/footer.css">
-
-    <title>New Veterinary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/slider.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Edit Veterinary</title>
 </head>
 <body>
     <header class="header">
@@ -25,16 +27,13 @@
             <img src="/img/pngwing.com.png" alt="">
             <h3>FindMyVet</h3>
         </div>
-
         <nav class="nav-links">
             <a href="/index">Home</a>
             <a href="/dashboard">Agenda tu cita</a>
-            <a href="">Informacion</a>
+            <a href="/informacion">Informacion</a>
         </nav>
         <a href="/joinus" class="btn">Unetenos</a>
-
         <a onclick="openNav()" class="menu" href="#">Menu</a>
-
         <div class="overlay" id="mobile-menu">
             <a href="" onclick="closeNav()" class="close">&times;</a>
             <div class="overlay-content">
@@ -45,10 +44,10 @@
             </div>
         </div>
     </header>
-    <div class="container">
 
+    <div class="container">
         <form:form action="/create" method="post" modelAttribute="veterinary">
-            <h1>Nueva veterinaria</h1>
+            <h1>Editar Veterinaria</h1>
             <div class="form-group">
                 <form:label path="vetname">Nombre de la veterinaria</form:label>
                 <form:input path="vetname" class="form-control"></form:input>
@@ -69,16 +68,15 @@
                 <form:textarea path="vetdescription" class="form-control"></form:textarea>
                 <form:errors path="vetdescription" class="text-danger"></form:errors>
             </div>
-            <div class="form-group">
-                <form:label path="vetemail">Descripcion</form:label>
-                <form:input path="vetemail" class="form-control"></form:input>
-                <form:errors path="vetemail" class="text-danger"></form:errors>
-            </div>
+            
+            <form:hidden path="id" value="${veterinary.id}"></form:hidden>
 
+            <input type="hidden" name="_method" value="put"/>
+            
             <input type="submit" value="Guardar" class="btn btn-success" />
         </form:form>
-    </div>
 
+    </div>
     <footer>
         <div class="divfooter">
             <h2>FindMyVet</h2>

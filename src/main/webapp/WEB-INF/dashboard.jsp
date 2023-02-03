@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/login.css">
     <title>Agendar cita</title>
 </head>
@@ -28,7 +29,7 @@
             <nav class="nav-links">
                 <a href="/index">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
-                <a href="">Informacion</a>
+                <a href="/informacion">Informacion</a>
             </nav>
             <a href="/joinus" class="btn">Unetenos</a>
 
@@ -46,7 +47,7 @@
         </header>
 
 		<div class="row">
-			<h2>Cursos</h2>
+			<h2>Veterinarias</h2>
 			<table class="table table-hover">
 				<thead>
 					<tr>
@@ -58,7 +59,7 @@
 				<tbody>
 					<c:forEach items="${all_veterinaries}" var="p">
 						<tr>
-							<td><a href="/${p.id}">${p.vetname}</a></td>
+							<td><a href="show/${p.id}">${p.vetname}</a></td>
                             <td>${p.ubicacion}</td>
                             <td>${p.servicios}</td>
 
@@ -69,6 +70,27 @@
 		</div>
 		<a href="/new" class="btn btn-success">Nueva veterinaria</a>
 	</div>
+    <footer>
+        <div class="divfooter">
+            <h2>FindMyVet</h2>
+            <p>El amor hacia los animales eleva el nivel cultural de la sociedad<br><br>
+                - F.Salvochea
+            </p>
+
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="divcontact">
+            <h3>Contactanos</h3>
+            <p>800 775 222 / findmyvet@gmail.com </p>
+        </div>
+    </footer>
+    <div class="llama">
+        <p>@ FindMyVet - Todos los derechos reservados</p>
+    </div>
     <script>
         function openNav(){
             document.getElementById("mobile-menu").style.width = "100%";

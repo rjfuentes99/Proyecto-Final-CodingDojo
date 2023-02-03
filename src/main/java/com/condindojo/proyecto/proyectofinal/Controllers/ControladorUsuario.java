@@ -73,8 +73,10 @@ public class ControladorUsuario {
             return "redirect:/index";
         }             
     }
+    
     @GetMapping("/index")
     public String dashboard(){
         return "index.jsp";
     }
+
 }

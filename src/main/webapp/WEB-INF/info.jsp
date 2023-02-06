@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/info.css">
     <link rel="stylesheet" href="css/login.css">
-    <title>Document</title>
+    <title>About us</title>
 </head>
 <body>
     <div class="container">
@@ -31,7 +31,7 @@
             <nav class="nav-links">
                 <a href="/index">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
-                <a href="">Informacion</a>
+                <a href="/informacion">Informacion</a>
             </nav>
             <a href="/joinus" class="btn">Unetenos</a>
 

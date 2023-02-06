@@ -47,7 +47,7 @@
                 <div class="overlay-content">
                     <a href="/index">Home</a>
                     <a href="/dashboard">Agenda tu cita</a>
-                    <a href="">Informacion</a>
+                    <a href="/informacion">Informacion</a>
                     <a href="/joinus" class="btn">Unetenos</a>
                 </div>
             </div>

@@ -39,17 +39,10 @@ public class ControladorUsuario {
             return "login.jsp";
         }else{
             session.setAttribute("user_session", nuevoUsuario);
-            return "redirect:/index";
+            return "redirect:/indexsession";
         }                        
     }
-    @GetMapping("/dashboard")
-    public String dashboard(HttpSession session, Model model){
-        
-        List<Veterinary> all_courses = servicio.listaVeterinarias();
-        model.addAttribute("all_veterinaries", all_courses);
 
-        return "dashboard.jsp";
-    }
     @GetMapping("/logout")
     public String logout(HttpSession session){
         session.removeAttribute("user_session");
@@ -66,17 +59,29 @@ public class ControladorUsuario {
         if (usuario_login == null) {
             // Hay un error
             redirectAttributes.addFlashAttribute("error_login","El correo/password son incorrectos");
-            return "redirect:/";
+            return "redirect:/joinus";
         }else{
             // Guardamos en sesion
             session.setAttribute("user_session", usuario_login);
-            return "redirect:/index";
+            return "redirect:/indexsession";
         }             
     }
     
     @GetMapping("/index")
-    public String dashboard(){
+    public String index(HttpSession session, Model model){
+         // Revisamos que haya iniciado sesion
+
+         // Revisamos que haya iniciado sesion
+         
         return "index.jsp";
     }
 
+    @GetMapping("/indexsession")
+    public String indexsession(HttpSession session, Model model){
+         // Revisamos que haya iniciado sesion
+
+         // Revisamos que haya iniciado sesion
+         
+        return "index2.jsp";
+    }
 }

@@ -1,5 +1,7 @@
 package com.condindojo.proyecto.proyectofinal.Controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -24,10 +26,18 @@ public class ControladorVeterinaria {
     @Autowired
     private AppService servicio;
     
+    @GetMapping("/dashboard")
+    public String dashboard(HttpSession session, Model model){
+        
+        List<Veterinary> all_courses = servicio.listaVeterinarias();
+        model.addAttribute("all_veterinaries", all_courses);
+
+        return "dashboard.jsp";
+    }
+    
     @GetMapping("/new")
     public String new_course(@ModelAttribute("veterinary") Veterinary veterinary,
                                 HttpSession session){
-
         return "newvet.jsp";                           
     }
 
@@ -64,19 +74,8 @@ public class ControladorVeterinaria {
     @GetMapping("/edit/{veterinary_id}")
     public String edit(@PathVariable("veterinary_id") Long veterinary_id,HttpSession session,
                         @ModelAttribute("veterinary") Veterinary veterinary, Model model){
-      /*   // Revisamos que haya iniciado sesion
-         User usuario_en_sesion = (User)session.getAttribute("user_session");
-         if (usuario_en_sesion == null) {
-             return "redirect:/"; 
-         }
-         // Revisamos que haya iniciado sesion*/
         
         Veterinary vet_edit = servicio.find_veterinary(veterinary_id);
-
-        /*// Revisamos que el usuario tenga el rol de administrador
-        if (course_edit.getPlanner().getId() != usuario_en_sesion.getId()) {
-            return "redirect:/dashboard";
-        }*/
 
         model.addAttribute("veterinary", vet_edit);
 
@@ -116,5 +115,14 @@ public class ControladorVeterinaria {
          
         servicio.delete(id);    
         return "redirect:/dashboard";
+    }
+    @GetMapping("/correo/{veterinary_id}")
+    public String correo(@PathVariable("veterinary_id") Long veterinary_id,HttpSession session,
+    @ModelAttribute("veterinary") Veterinary veterinary, Model model){
+
+        Veterinary vet = servicio.find_veterinary(veterinary_id);
+        model.addAttribute("vetid", vet);
+
+        return "correo.jsp";
     }
 }

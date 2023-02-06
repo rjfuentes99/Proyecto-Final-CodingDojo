@@ -109,6 +109,14 @@ public class Veterinary {
         this.vetdescription = vetdescription;
     }
 
+    public String getVetemail() {
+        return vetemail;
+    }
+
+    public void setVetemail(String vetemail) {
+        this.vetemail = vetemail;
+    }
+
     
     
 }

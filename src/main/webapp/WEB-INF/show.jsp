@@ -1,3 +1,6 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +19,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/show.css">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/footer.css">
-
-    <title>Document</title>
+    <title>${vetid.vetname}</title>
 </head>
 <body>
     <div class="container">
@@ -33,7 +36,7 @@
             <nav class="nav-links">
                 <a href="/index">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
-                <a href="">Informacion</a>
+                <a href="/informacion">Informacion</a>
             </nav>
             <a href="/joinus" class="btn">Unetenos</a>
 
@@ -49,16 +52,31 @@
                 </div>
             </div>
         </header>
-
         <main>
             <div>
                 <h2>${vetid.vetname}</h2>
                 <h3>${vetid.vetdescription}</h3>
-            </div>
-            <div>
-                <!--Mensajes de usuarios-->
+                <h3>${vetid.servicios}</h3>
+                <h3>Ubicacion: ${vetid.ubicacion}</h3>
+                <a href="/correo/${veterinary_id}">Agendar Cita</a>
             </div>
         </main>
+
+        <aside>
+                <!--Mensajes-->
+        </aside>
+        <div class="seguro">
+            <img src="/img/mascota.jpg" alt=" Servicio">
+            
+            <div class="seguro-text">
+                        <h2>Protegelos</h2><br>
+                        <p>Enterate como asegurar a tus mascotas</p>
+                    </div>
+                    <a href="#" class="btn4">Mas informacion </a>
+                </div>
+            </div>
+    
+        </div>
         <a href="/edit/${veterinary_id}" class="btn btn-warning">Edit</a>
 
         <form action="/delete/${veterinary_id}" method="post">

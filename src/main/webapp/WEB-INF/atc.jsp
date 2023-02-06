@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/css/atc.css">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <title>Edit Veterinary</title>
+    <title>Atencion al cliente</title>
 </head>
 <body>
 	<div class="container">

@@ -14,13 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/login.css">
     <title>Agendar cita</title>
 </head>
 <body>
 	<div class="container">
-		<header class="header">
+        <header class="header">
             <div class="logo">
                 <img src="/img/pngwing.com.png" alt="">
                 <h3>FindMyVet</h3>
@@ -40,35 +41,35 @@
                 <div class="overlay-content">
                     <a href="/index">Home</a>
                     <a href="/dashboard">Agenda tu cita</a>
-                    <a href="">Informacion</a>
+                    <a href="/informacion">Informacion</a>
                     <a href="/joinus" class="btn">Unetenos</a>
                 </div>
             </div>
         </header>
-
-		<div class="row">
-			<h2>Veterinarias</h2>
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>Veterinaria</th>
-						<th>Ubicacion</th>
+        <div class="containertabla">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Veterinaria</th>
+                        <th>Ubicacion</th>
                         <th>Servicios</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${all_veterinaries}" var="p">
-						<tr>
-							<td><a href="show/${p.id}">${p.vetname}</a></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <c:forEach items="${all_veterinaries}" var="p">
+                        <tr>
+                            <td><a href="show/${p.id}">${p.vetname}</a></td>
                             <td>${p.ubicacion}</td>
                             <td>${p.servicios}</td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
 
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
-		<a href="/new" class="btn btn-success">Nueva veterinaria</a>
+        </div>
+        <div><a href="/new" id="btnnuevavet">Nueva veterinaria</a></div>
+        </div>
+
 	</div>
     <footer>
         <div class="divfooter">

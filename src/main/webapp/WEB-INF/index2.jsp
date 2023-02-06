@@ -25,7 +25,11 @@
 </head>
 
 <body>
-
+    <div>
+        <c:if test="${user_session.name == user_session.name}">
+            <h1>Bienvenid@ ${user_session.name}</h1>
+        </c:if>
+    </div>
     <div class="container">
         <header class="header">
             <div class="logo">
@@ -37,16 +41,16 @@
                 <a href="/dashboard">Agenda tu cita</a>
                 <a href="/informacion">Informacion</a>
             </nav>
-            <a href="/joinus" class="btn">Unetenos</a>
+            <a href="/logout" class="btn">Cerrar Sesion</a>
             <a onclick="openNav()" class="menu" href="#">Menu</a>
             <div class="overlay" id="mobile-menu">
                 <a href="" onclick="closeNav()" class="close">&times;</a>
                 <div class="overlay-content">
+
                     <a href="/index">Home</a>
                     <a href="/dashboard">Agenda tu cita</a>
                     <a href="/informacion">Informacion</a>
-
-                    <a href="/joinus" class="btn">Unetenos</a>
+                    <a href="/logout" class="btn">Cerrar Sesion</a>
                     
                 </div>
             </div>

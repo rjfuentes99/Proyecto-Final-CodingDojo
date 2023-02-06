@@ -34,7 +34,6 @@ public class User {
     private String email;
 
     @NotEmpty(message = "El campo de password es obligatorio.")
-    @Size(min = 6, max = 16, message = "La contraseña debe ser entre 6 y 16 caracteres")
     private String password;
 
     @Transient // No me guarda el dato en la base de datos

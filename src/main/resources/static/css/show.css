@@ -1,0 +1,117 @@
+main{
+    margin-bottom: 40px;
+}
+main div{
+    
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    
+    width: 700px;
+    height: 500px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+main div h2{
+    
+    width: 100%;
+    background-color: #2f4b57;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main div h3{
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: justify;
+    width: 500px;
+}
+
+main div a {
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+main div a:hover{
+    background-color: #e2f1f8;
+    color: #e1d7c6;
+    transform: scale(1.1);
+}
+aside{
+    display: inline;
+}
+aside img{
+    width: 400px;
+    height: 400px;
+}
+
+
+
+.seguro{
+    width: 996px;
+    height: 252px;
+    position: relative;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.seguro-text{
+    background-color: white;
+    position: relative;
+    bottom: 220px;
+    left: 30px;
+    padding: 30px 30px;
+    width: 250px;
+    height: 170px;
+    border-radius: 10px;
+    box-shadow: 5px 8px 18px black;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.seguro-text h2{
+    color: #2f4b57;
+}
+.seguro-text p{
+    color:  black;
+    font-weight: 500;
+}
+
+.btn4{
+    background: #9f6128; 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57b4ee', endColorstr='#7db9e8',GradientType=0 );
+    border-radius: 5px;
+    padding: 8px 2px;
+    color: #0f3c50;
+    font-weight: bold;
+    transition: color 0.5s;
+    margin-left: 20px;
+    font-size: 11px;
+    min-width: 100px;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    bottom: 300px;
+    left: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 6px 18px black;
+
+}
+.btn4:hover{
+    color: black;
+}

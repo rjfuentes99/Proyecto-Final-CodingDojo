@@ -44,7 +44,7 @@
                 <div class="overlay-content">
                     <a href="/index">Home</a>
                     <a href="/dashboard">Agenda tu cita</a>
-                    <a href="">Informacion</a>
+                    <a href="/informacion">Informacion</a>
                     <a href="/joinus" class="btn">Unetenos</a>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                     <h1>Register Form</h1>
                     <div class='input-field'>
                         <form:label path="name"></form:label>
-                        <form:input path="name" class='input-field' placeholder='Primer Nombre'></form:input>
+                        <form:input path="name" class='input-field' placeholder='Nombre'></form:input>
                         <form:errors path="name" class="text-danger"></form:errors>
                     </div>
                     <div class='input-field'>

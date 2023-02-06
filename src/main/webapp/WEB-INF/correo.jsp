@@ -14,13 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/footer.css">
-
-    <title>New Veterinary</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/atc.css">
+    <title>Agenda tu cita</title>
 </head>
 <body>
-    <header class="header">
+	<header class="header">
         <div class="logo">
             <img src="/img/pngwing.com.png" alt="">
             <h3>FindMyVet</h3>
@@ -29,7 +29,7 @@
         <nav class="nav-links">
             <a href="/index">Home</a>
             <a href="/dashboard">Agenda tu cita</a>
-            <a href="">Informacion</a>
+            <a href="/informacion">Informacion</a>
         </nav>
         <a href="/joinus" class="btn">Unetenos</a>
 
@@ -40,44 +40,35 @@
             <div class="overlay-content">
                 <a href="/index">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
-                <a href="/informacion">Informacion</a>
+                <a href="">Informacion</a>
                 <a href="/joinus" class="btn">Unetenos</a>
             </div>
         </div>
     </header>
     <div class="container">
-
-        <form:form action="/create" method="post" modelAttribute="veterinary">
-            <h1>Nueva veterinaria</h1>
-            <div class="form-group">
-                <form:label path="vetname">Nombre de la veterinaria</form:label>
-                <form:input path="vetname" class="form-control"></form:input>
-                <form:errors path="vetname" class="text-danger"></form:errors>
-            </div>
-            <div class="form-group">
-                <form:label path="ubicacion">Ubicacion</form:label>
-                <form:input path="ubicacion" class="form-control"></form:input>
-                <form:errors path="ubicacion" class="text-danger"></form:errors>
-            </div>
-            <div class="form-group">
-                <form:label path="servicios">Servicios</form:label>
-                <form:input path="servicios" class="form-control"></form:input>
-                <form:errors path="servicios" class="text-danger"></form:errors>
-            </div>
-            <div class="form-group">
-                <form:label path="vetdescription">Descripcion</form:label>
-                <form:textarea path="vetdescription" class="form-control"></form:textarea>
-                <form:errors path="vetdescription" class="text-danger"></form:errors>
-            </div>
-            <div class="form-group">
-                <form:label path="vetemail">E-mail</form:label>
-                <form:input path="vetemail" class="form-control"></form:input>
-                <form:errors path="vetemail" class="text-danger"></form:errors>
-            </div>
+        <h2>${vetid.vetname}</h2>
+        <form action="https://formsubmit.co/${vetid.vetemail}" method="POST">
             
-            <input type="submit" value="Guardar" class="btn btn-success" />
-        </form:form>
+            <label for="Nombre">Nombre</label>
+            <input type="text" name="name">
+
+            <label for="email">Correo Electronico</label>
+            <input type="email" name="email">
+
+            <label for="subject">Tipo de cita</label>
+            <input type="text" name="subject">
+
+            <label for="start">Fecha</label>
+            <input type="date"  name="date"
+                   min="2023-02-08" max="2023-12-31">
+            
+            <label for="comments">Comentarios</label>
+            <textarea name="comments" id="" cols="15" rows="5"></textarea>
+
+            <input type="submit" value="Enviar">
+       </form>
     </div>
+
     <footer>
         <div class="divfooter">
             <h2>FindMyVet</h2>

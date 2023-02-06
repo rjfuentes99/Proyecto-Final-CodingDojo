@@ -1,5 +1,7 @@
 package com.condindojo.proyecto.proyectofinal.Controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -23,6 +25,15 @@ public class ControladorVeterinaria {
     
     @Autowired
     private AppService servicio;
+    
+    @GetMapping("/dashboard")
+    public String dashboard(HttpSession session, Model model){
+        
+        List<Veterinary> all_courses = servicio.listaVeterinarias();
+        model.addAttribute("all_veterinaries", all_courses);
+
+        return "dashboard.jsp";
+    }
     
     @GetMapping("/new")
     public String new_course(@ModelAttribute("veterinary") Veterinary veterinary,
@@ -104,5 +115,14 @@ public class ControladorVeterinaria {
          
         servicio.delete(id);    
         return "redirect:/dashboard";
+    }
+    @GetMapping("/correo/{veterinary_id}")
+    public String correo(@PathVariable("veterinary_id") Long veterinary_id,HttpSession session,
+    @ModelAttribute("veterinary") Veterinary veterinary, Model model){
+
+        Veterinary vet = servicio.find_veterinary(veterinary_id);
+        model.addAttribute("vetid", vet);
+
+        return "correo.jsp";
     }
 }

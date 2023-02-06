@@ -22,24 +22,27 @@
     <title>Edit Veterinary</title>
 </head>
 <body>
-    <header class="header">
+	<header class="header">
         <div class="logo">
             <img src="/img/pngwing.com.png" alt="">
             <h3>FindMyVet</h3>
         </div>
+
         <nav class="nav-links">
             <a href="/index">Home</a>
             <a href="/dashboard">Agenda tu cita</a>
             <a href="/informacion">Informacion</a>
         </nav>
         <a href="/joinus" class="btn">Unetenos</a>
+
         <a onclick="openNav()" class="menu" href="#">Menu</a>
+
         <div class="overlay" id="mobile-menu">
             <a href="" onclick="closeNav()" class="close">&times;</a>
             <div class="overlay-content">
                 <a href="/index">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
-                <a href="">Informacion</a>
+                <a href="/informacion">Informacion</a>
                 <a href="/joinus" class="btn">Unetenos</a>
             </div>
         </div>
@@ -67,6 +70,11 @@
                 <form:label path="vetdescription">Descripcion</form:label>
                 <form:textarea path="vetdescription" class="form-control"></form:textarea>
                 <form:errors path="vetdescription" class="text-danger"></form:errors>
+            </div>
+            <div class="form-group">
+                <form:label path="vetemail">E-mail</form:label>
+                <form:input path="vetemail" class="form-control"></form:input>
+                <form:errors path="vetemail" class="text-danger"></form:errors>
             </div>
             
             <form:hidden path="id" value="${veterinary.id}"></form:hidden>

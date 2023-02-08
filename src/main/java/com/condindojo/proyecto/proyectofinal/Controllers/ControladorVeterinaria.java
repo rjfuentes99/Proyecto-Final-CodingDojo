@@ -28,7 +28,13 @@ public class ControladorVeterinaria {
     
     @GetMapping("/dashboard")
     public String dashboard(HttpSession session, Model model){
-        
+            // Revisamos que haya iniciado sesion
+            User usuario_en_sesion = (User)session.getAttribute("user_session");
+            if (usuario_en_sesion == null) {
+                return "redirect:/"; 
+            }
+            // Revisamos que haya iniciado sesion
+            
         List<Veterinary> all_courses = servicio.listaVeterinarias();
         model.addAttribute("all_veterinaries", all_courses);
 
@@ -38,6 +44,13 @@ public class ControladorVeterinaria {
     @GetMapping("/new")
     public String new_course(@ModelAttribute("veterinary") Veterinary veterinary,
                                 HttpSession session){
+                                        // Revisamos que haya iniciado sesion
+         User usuario_en_sesion = (User)session.getAttribute("user_session");
+         if (usuario_en_sesion == null) {
+             return "redirect:/"; 
+         }
+         // Revisamos que haya iniciado sesion
+         
         return "newvet.jsp";                           
     }
 
@@ -45,7 +58,13 @@ public class ControladorVeterinaria {
     public String create_course(@Valid @ModelAttribute("veterinary") Veterinary veterinary,
                                 BindingResult result,HttpSession session){
 
-
+    // Revisamos que haya iniciado sesion
+    User usuario_en_sesion = (User)session.getAttribute("user_session");
+    if (usuario_en_sesion == null) {
+        return "redirect:/"; 
+    }
+    // Revisamos que haya iniciado sesion
+    
         if (result.hasErrors()) {
             return "newvet.jsp";
         }else{
@@ -58,12 +77,12 @@ public class ControladorVeterinaria {
     @GetMapping("/show/{veterinary_id}")
     public String show_course_info(@PathVariable("veterinary_id") Long veterinary_id, HttpSession session,
                              Model model){
-       /*   // Revisamos que haya iniciado sesion
+         // Revisamos que haya iniciado sesion
          User usuario_en_sesion = (User)session.getAttribute("user_session");
          if (usuario_en_sesion == null) {
              return "redirect:/"; 
          }
-         // Revisamos que haya iniciado sesion*/
+         // Revisamos que haya iniciado sesion
          
          Veterinary vet = servicio.find_veterinary(veterinary_id);
          model.addAttribute("vetid", vet);
@@ -84,12 +103,12 @@ public class ControladorVeterinaria {
     
     @PutMapping("/update")
     public String update(@Valid @ModelAttribute("veterinary") Veterinary veterinary, BindingResult result, HttpSession session, Model model){
-      /*   // Revisamos que haya iniciado sesion
+       // Revisamos que haya iniciado sesion
          User usuario_en_sesion = (User)session.getAttribute("user_session");
          if (usuario_en_sesion == null) {
              return "redirect:/"; 
          }
-         // Revisamos que haya iniciado sesion*/
+         // Revisamos que haya iniciado sesion
 
         if (result.hasErrors()) {
             // Obtengo el proyecto para enviarlo denuevo
@@ -106,12 +125,12 @@ public class ControladorVeterinaria {
     @DeleteMapping("delete/{veterinary_id}")
     public String eliminar_veterinaria(@PathVariable("veterinary_id") Long id, HttpSession session){
 
-      /*   // Revisamos que haya iniciado sesion
+       //Revisamos que haya iniciado sesion
          User usuario_en_sesion = (User)session.getAttribute("user_session");
          if (usuario_en_sesion == null) {
              return "redirect:/"; 
          }
-         // Revisamos que haya iniciado sesion*/
+        // Revisamos que haya iniciado sesion*/
          
         servicio.delete(id);    
         return "redirect:/dashboard";

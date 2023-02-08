@@ -1,0 +1,87 @@
+
+/* FRASEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE Y DONACIOOOOOOOOOOOOOOOOOOOOOOON*/
+
+.donacion{
+    text-align: center;
+    width: 1349px;
+    height: 461px;
+    position: relative;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.donacion img{
+    position: relative;
+    bottom: 10%;
+    border-radius: 10px;
+}
+/*FRASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+.frase-text{
+    background-color: #0000000a;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    padding: 30px 30px;
+    width: 200px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 5px 8px 18px black;
+}
+
+.frase-text h2{
+    font-size: 15px;
+    color: white;
+   font-weight: 400;
+}
+.frase-text p{
+    color:  white;
+    font-weight: 500;
+}
+.donacion-text{
+    background-color: #9f61288c;
+    position: absolute;
+    top: 10%;
+    left: 65%;
+    padding: 30px 30px;
+    width: 250px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 5px 8px 18px orangered;
+    text-transform: uppercase;
+}
+
+.donacion-text h2{
+    font-size: 15px;
+    color: black;
+   font-family: 'Oswald', sans-serif ;
+}
+.donacion-text p{
+    color:  white;
+    font-weight: 400;
+}
+
+.btn4{
+    background: #9f6128; 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57b4ee', endColorstr='#7db9e8',GradientType=0 );
+    position: absolute;
+    border-radius: 5px;
+    padding: 8px 2px;
+    color: #0f3c50;
+    font-weight: bold;
+    transition: color 0.5s;
+    margin-left: 20px;
+    font-size: 11px;
+    min-width: 100px;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: none;
+    top: 43%;
+    left: 74%;
+    border-radius: 10px;
+    box-shadow: 5px 6px 18px black;
+
+}
+.btn4:hover{
+    color: black;
+}

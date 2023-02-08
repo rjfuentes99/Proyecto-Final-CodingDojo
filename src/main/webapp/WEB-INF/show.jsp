@@ -19,9 +19,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/atencion.css">
     <link rel="stylesheet" href="/css/show.css">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="shortcut icon" href="/img/pngwing.com.png">
+
     <title>${vetid.vetname}</title>
 </head>
 <body>
@@ -34,21 +37,21 @@
             </div>
 
             <nav class="nav-links">
-                <a href="/index">Home</a>
+                <a href="/">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
                 <a href="/informacion">Informacion</a>
             </nav>
-            <a href="/joinus" class="btn">Unetenos</a>
+            <a href="/logout" class="btn">Cerrar Sesion</a>
 
             <a onclick="openNav()" class="menu" href="#">Menu</a>
 
             <div class="overlay" id="mobile-menu">
                 <a href="" onclick="closeNav()" class="close">&times;</a>
                 <div class="overlay-content">
-                    <a href="/index">Home</a>
+                    <a href="/">Home</a>
                     <a href="/dashboard">Agenda tu cita</a>
                     <a href="/informacion">Informacion</a>
-                    <a href="/joinus" class="btn">Unetenos</a>
+                    <a href="/logout" class="btn">Cerrar Sesion</a>
                 </div>
             </div>
         </header>
@@ -58,55 +61,80 @@
                 <h3>${vetid.vetdescription}</h3>
                 <h3>${vetid.servicios}</h3>
                 <h3>Ubicacion: ${vetid.ubicacion}</h3>
-                <a href="/correo/${veterinary_id}">Agendar Cita</a>
+                <button id="btn-abrir-popup" class="btn-abrir-popup">Agendar Cita</button>
             </div>
         </main>
+        
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h3>SOMOS ${vetid.vetname} </h3>
+                <h4>Agenda tu hora</h4>
+                <form action="https://formsubmit.co/${vetid.vetemail}" method="POST">
+                    <div class="contenedor-inputs">
+                        <input type="text" placeholder="Nombre" name="nameuser">
+                        <input type="email" placeholder="Correo" name="emailuser+">
+                        <select required name="Tipo"  >
+                            <option selected disabled  value="selecto">Tipo de cita</option>
+                            <option value="consulta">CONSULTA MEDICA</option>
+                            <option value="Examenes">EXAMENES Y PROCEDIMIENTOS</option>
+                            <option value="Peluqueria">PELUQUERIA</option>
 
+                        </select>
+                        <input type="date"  name="date"min="2023-02-08" max="2023-12-31">
+                        <textarea name="comments" placeholder="Comentarios" cols="15" rows="5"></textarea>
+                    </div>
+                    <input type="submit" class="btn-submit" value="Agendar">
+                </form>
+            </div>
+        </div>
+        <script src="popup.js"></script>
         <aside>
                 <!--Mensajes-->
         </aside>
-        <div class="seguro">
-            <img src="/img/mascota.jpg" alt=" Servicio">
-            
-            <div class="seguro-text">
-                        <h2>Protegelos</h2><br>
-                        <p>Enterate como asegurar a tus mascotas</p>
-                    </div>
-                    <a href="#" class="btn4">Mas informacion </a>
-                </div>
-            </div>
+
     
         </div>
-        <a href="/edit/${veterinary_id}" class="btn btn-warning">Edit</a>
 
-        <form action="/delete/${veterinary_id}" method="post">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" value="Eliminar" class="btn btn-danger">
-        </form>
     </div>
 
     <footer>
-        <div class="divfooter">
-            <h2>FindMyVet</h2>
-            <p>El amor hacia los animales eleva el nivel cultural de la sociedad<br><br>
-                - F.Salvochea
-            </p>
-
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-        </div>
         <div class="divcontact">
-            <h3>Contactanos</h3>
-            <p>800 775 222 / findmyvet@gmail.com </p>
+            <div class="logoimagen">
+                <img src="/img/pngwing.com.png" alt="" width="40px" height="40px"><span>FindmyVet</span>
+            </div>
+            <p>
+                <span class="material-symbols-outlined">mail</span>
+                findmyvet@gmail.com
+            </p>
+            <p>
+                <span class="material-symbols-outlined">call</span>
+                800 775 222
+            </p>
         </div>
+
     </footer>
     <div class="llama">
         <p>@ FindMyVet - Todos los derechos reservados</p>
     </div>
 
+    <script>
+        var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
+        overlay = document.getElementById('overlay'),
+        popup = document.getElementById('popup'),
+        btnCerrarPopup = document.getElementById('btn-cerrar-popup');
+
+    btnAbrirPopup.addEventListener('click', function(){
+        overlay.classList.add('active');
+        popup.classList.add('active');
+    });
+
+    btnCerrarPopup.addEventListener('click', function(e){
+        e.preventDefault();
+        overlay.classList.remove('active');
+        popup.classList.remove('active');
+    });
+    </script>
     <script>
         function openNav() {
             document.getElementById("mobile-menu").style.width = "100%";

@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="shortcut icon" href="/img/pngwing.com.png">
     <title>Agendar cita</title>
 </head>
@@ -71,7 +71,18 @@
         </div>
 
     </div>
-	
+    <div class="seguro">
+        <img src="/img/mascota.jpg" alt=" Servicio">
+        
+        <div class="seguro-text">
+                    <h2>Protegelos</h2><br>
+                    <p>Enterate como asegurar a tus mascotas</p>
+                </div>
+                <a href="#" class="btn4">Mas informacion </a>
+            </div>
+        </div>
+
+    </div>
     <footer>
         <div class="divcontact">
             <div class="logoimagen">

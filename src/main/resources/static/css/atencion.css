@@ -22,6 +22,7 @@
 /* ------------------------- */
 
 .overlay {
+	z-index: 100;
 	background: rgba(0,0,0,.3);
 	position: fixed;
 	top: 0;
@@ -34,7 +35,8 @@
 	visibility: hidden;
 }
 
-.overlay.active {
+.overlay .active {
+	z-index: 100;
 	visibility: visible;
 }
 

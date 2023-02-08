@@ -172,12 +172,14 @@ main{
 /* PROTEGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE A TU MASCOTAAAAAAAAAAAAAAAAA*/
 
 .seguro{
+    
     width: 996px;
     height: 252px;
     position: relative;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
+    z-index: -1;
 
 }
 

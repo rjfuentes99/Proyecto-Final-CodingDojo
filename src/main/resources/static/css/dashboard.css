@@ -3,7 +3,8 @@
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
+    width: 900px;
+	height: 350px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -13,7 +14,9 @@
     text-align: left;
 }
 
-
+.styled-table tbody a{
+	color: #2f4b57;
+}
 .styled-table th,
 .styled-table td {
     padding: 12px 15px;
@@ -38,7 +41,7 @@
 
 .containertabla {
     margin: auto;
-    width: 40%;
+    width: 1000px;
 }
 
 

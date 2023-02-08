@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="/img/pngwing.com.png">
     <title>Agendar cita</title>
 </head>
 <body>
@@ -28,21 +30,21 @@
             </div>
 
             <nav class="nav-links">
-                <a href="/index">Home</a>
+                <a href="/">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
                 <a href="/informacion">Informacion</a>
             </nav>
-            <a href="/joinus" class="btn">Unetenos</a>
+            <a href="/logout" class="btn">Cerrar Sesion</a>
 
             <a onclick="openNav()" class="menu" href="#">Menu</a>
 
             <div class="overlay" id="mobile-menu">
                 <a href="" onclick="closeNav()" class="close">&times;</a>
                 <div class="overlay-content">
-                    <a href="/index">Home</a>
+                    <a href="/">Home</a>
                     <a href="/dashboard">Agenda tu cita</a>
                     <a href="/informacion">Informacion</a>
-                    <a href="/joinus" class="btn">Unetenos</a>
+                    <<a href="/logout" class="btn">Cerrar Sesion</a>
                 </div>
             </div>
         </header>
@@ -67,31 +69,29 @@
             </table>
 
         </div>
-        <div><a href="/new" id="btnnuevavet">Nueva veterinaria</a></div>
-        </div>
 
-	</div>
+    </div>
+	
     <footer>
-        <div class="divfooter">
-            <h2>FindMyVet</h2>
-            <p>El amor hacia los animales eleva el nivel cultural de la sociedad<br><br>
-                - F.Salvochea
-            </p>
-
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-        </div>
         <div class="divcontact">
-            <h3>Contactanos</h3>
-            <p>800 775 222 / findmyvet@gmail.com </p>
+            <div class="logoimagen">
+                <img src="/img/pngwing.com.png" alt="" width="40px" height="40px"><span>FindmyVet</span>
+            </div>
+            <p>
+                <span class="material-symbols-outlined">mail</span>
+                findmyvet@gmail.com
+            </p>
+            <p>
+                <span class="material-symbols-outlined">call</span>
+                800 775 222
+            </p>
         </div>
+
     </footer>
     <div class="llama">
         <p>@ FindMyVet - Todos los derechos reservados</p>
     </div>
+
     <script>
         function openNav(){
             document.getElementById("mobile-menu").style.width = "100%";

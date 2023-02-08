@@ -67,20 +67,26 @@ public class ControladorUsuario {
         }             
     }
     
-    @GetMapping("/index")
+    @GetMapping("/")
     public String index(HttpSession session, Model model){
-         // Revisamos que haya iniciado sesion
-
-         // Revisamos que haya iniciado sesion
+       //Revisamos que haya iniciado sesion
+       User usuario_en_sesion = (User)session.getAttribute("user_session");
+       if (usuario_en_sesion != null) {
+           return "redirect:/indexsession"; 
+       }
+      // Revisamos que haya iniciado sesion*/
          
         return "index.jsp";
     }
 
     @GetMapping("/indexsession")
     public String indexsession(HttpSession session, Model model){
-         // Revisamos que haya iniciado sesion
-
-         // Revisamos que haya iniciado sesion
+       //Revisamos que haya iniciado sesion
+       User usuario_en_sesion = (User)session.getAttribute("user_session");
+       if (usuario_en_sesion == null) {
+           return "redirect:/"; 
+       }
+      // Revisamos que haya iniciado sesion*/
          
         return "index2.jsp";
     }

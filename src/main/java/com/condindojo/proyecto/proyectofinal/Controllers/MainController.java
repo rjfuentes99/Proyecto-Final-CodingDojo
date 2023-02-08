@@ -17,4 +17,10 @@ public class MainController {
         return "atc.jsp";
     }
 
+    @GetMapping("/aranceles")
+    public String aranceles(){
+        return "aranceles.jsp";
+    }
+
+
 }

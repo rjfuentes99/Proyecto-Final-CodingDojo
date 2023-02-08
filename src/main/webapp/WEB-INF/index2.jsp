@@ -20,16 +20,13 @@
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/donacion.css">
+    <link rel="shortcut icon" href="/img/pngwing.com.png">
 
     <title>FindMyVet</title>
 </head>
 
 <body>
-    <div>
-        <c:if test="${user_session.name == user_session.name}">
-            <h1>Bienvenid@ ${user_session.name}</h1>
-        </c:if>
-    </div>
     <div class="container">
         <header class="header">
             <div class="logo">
@@ -37,17 +34,18 @@
                 <h3>FindMyVet</h3>
             </div>
             <nav class="nav-links">
-                <a href="/index">Home</a>
+                <a href="/">Home</a>
                 <a href="/dashboard">Agenda tu cita</a>
                 <a href="/informacion">Informacion</a>
             </nav>
             <a href="/logout" class="btn">Cerrar Sesion</a>
+
             <a onclick="openNav()" class="menu" href="#">Menu</a>
             <div class="overlay" id="mobile-menu">
                 <a href="" onclick="closeNav()" class="close">&times;</a>
                 <div class="overlay-content">
 
-                    <a href="/index">Home</a>
+                    <a href="/">Home</a>
                     <a href="/dashboard">Agenda tu cita</a>
                     <a href="/informacion">Informacion</a>
                     <a href="/logout" class="btn">Cerrar Sesion</a>
@@ -83,25 +81,39 @@
             <button class="boton-vet" id="btn1" ><a href="/mapa"><span class="material-symbols-outlined">pets</span><h3>Buscar veterinarias</h3></a></button>
             <button class="boton-hora" id="btn1" ><a href="/dashboard"><span class="material-symbols-outlined">calendar_month</span><h3>Reservar Hora</h3></a></button>
             <button class="boton-servicio"> <a href="/atencioncliente"><span class="material-symbols-outlined">manage_accounts</span><h3>Servicio al cliente</h3></a></button>
-            <button class="boton-aranceles"> <a href=""><span class="material-symbols-outlined">payments</span><h3>Aranceles</h3></a></button>
+            <button class="boton-aranceles"> <a href="/aranceles"><span class="material-symbols-outlined">payments</span><h3>Aranceles</h3></a></button>
         </section>
-        <footer>
-            <div class="divfooter">
-                <h2>FindMyVet</h2>
-                <p>El amor hacia los animales eleva el nivel cultural de la sociedad<br><br>
-                    - F.Salvochea
-                </p>
+        <div class="donacion">
+            <img src="/img/cachorro.jpeg" alt=" Servicio">
+
+            <div class="frase-text">
+                <h2>El amor hacia los animales eleva el nivel cultural de la sociedad. </h2><br>
+                <p>F. Salvochea </p>
+            </div>
     
-                <ul class="socials">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul>
+            <div class="donacion-text">
+                <h2>Juntos Podemos Ayudarlos!!!</h2><br>
+                <p>Enterate como puedes adoptar y hacer donaciones a refugios de animales </p>
+                </div>
+                    <a href="#" class="btn4">Mas informacion </a>
+                </div>
             </div>
+    </div>
+        <footer>
             <div class="divcontact">
-                <h3>Contactanos</h3>
-                <p>800 775 222 / findmyvet@gmail.com </p>
+                <div class="logoimagen">
+                    <img src="/img/pngwing.com.png" alt="" width="40px" height="40px"><span>FindmyVet</span>
+                </div>
+                <p>
+                    <span class="material-symbols-outlined">mail</span>
+                    findmyvet@gmail.com
+                </p>
+                <p>
+                    <span class="material-symbols-outlined">call</span>
+                    800 775 222
+                </p>
             </div>
+    
         </footer>
         <div class="llama">
             <p>@ FindMyVet - Todos los derechos reservados</p>

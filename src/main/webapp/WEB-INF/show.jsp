@@ -97,7 +97,18 @@
         </div>
 
     </div>
+    <div class="seguro">
+        <img src="/img/mascota.jpg" alt=" Servicio">
+        
+        <div class="seguro-text">
+                    <h2>Protegelos</h2><br>
+                    <p>Enterate como asegurar a tus mascotas</p>
+                </div>
+                <a href="#" class="btn4">Mas informacion </a>
+            </div>
+        </div>
 
+    </div>
     <footer>
         <div class="divcontact">
             <div class="logoimagen">
@@ -124,16 +135,17 @@
         popup = document.getElementById('popup'),
         btnCerrarPopup = document.getElementById('btn-cerrar-popup');
 
-    btnAbrirPopup.addEventListener('click', function(){
-        overlay.classList.add('active');
-        popup.classList.add('active');
-    });
+        btnAbrirPopup.addEventListener('click', function(){
+            overlay.classList.add('active');
+            
+            popup.classList.add('active');
+        });
 
-    btnCerrarPopup.addEventListener('click', function(e){
-        e.preventDefault();
-        overlay.classList.remove('active');
-        popup.classList.remove('active');
-    });
+        btnCerrarPopup.addEventListener('click', function(e){
+            e.preventDefault();
+            overlay.classList.remove('active');
+            popup.classList.remove('active');
+        });
     </script>
     <script>
         function openNav() {
